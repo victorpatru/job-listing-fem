@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .card {
+    @apply bg-filteringLightCyan text-primaryCyan py-1 px-2 rounded hover:text-white hover:bg-primaryCyan cursor-pointer;
+  }
+}

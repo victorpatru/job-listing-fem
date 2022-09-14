@@ -16,12 +16,17 @@ To add a filter, the user needs to click on the tablets on the right-side of the
 
 */
 
+import Header from "./components/Header";
+import CardList from "./components/CardList";
+
 function App() {
   return (
-    <main className="min-h-screen bg-backgroundLightCyan font-serif">
-      <header className="bg-mobile-header-image bg-primaryCyan bg-no-repeat bg-cover bg-center h-36 md:bg-desktop-header-image"></header>
-      <h1 className="text-6xl">Hello</h1>
-    </main>
+    <>
+      <Header />
+      <main className="min-h-screen bg-backgroundLightCyan font-serif flex flex-col justify-start items-center pt-20">
+        <CardList />
+      </main>
+    </>
   );
 }
 export default App;
