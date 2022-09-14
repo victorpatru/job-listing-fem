@@ -2,12 +2,6 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    screens: {
-      mobile: "480px",
-      tablet: "768px",
-      lg: "1020px",
-      desktop: "1440px",
-    },
     extend: {
       colors: {
         primaryCyan: "hsl(180, 29%, 50%)",
@@ -21,6 +15,15 @@ module.exports = {
       },
       fontSize: {
         base: "15px",
+      },
+      backgroundImage: {
+        "mobile-header-image": "url(src/assets/images/bg-header-mobile.svg)",
+        "desktop-header-image": "url(src/assets/images/bg-header-desktop.svg)",
+      },
+      screens: {
+        mobile: "480px",
+        md: "768px",
+        desktop: "1440px",
       },
     },
   },
