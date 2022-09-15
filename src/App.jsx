@@ -26,7 +26,7 @@ function App() {
     <FilteringProvider>
       <Header />
       {/* Add state that if filtering is open add the "space-y-60" to the classNames of the main element */}
-      <main className="relative min-h-screen bg-backgroundLightCyan font-serif flex flex-col justify-start items-center">
+      <main className="relative min-h-screen bg-backgroundLightCyan font-serif flex flex-col justify-start items-center pb-20">
         <FilteringCard />
         <CardList />
       </main>
