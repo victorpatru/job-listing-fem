@@ -19,17 +19,18 @@ To add a filter, the user needs to click on the tablets on the right-side of the
 import Header from "./components/Header";
 import CardList from "./components/CardList";
 import FilteringCard from "./components/FilteringCard";
+import { FilteringProvider } from "./context/FilteringContext";
 
 function App() {
   return (
-    <>
+    <FilteringProvider>
       <Header />
       {/* Add state that if filtering is open add the "space-y-60" to the classNames of the main element */}
       <main className="relative min-h-screen bg-backgroundLightCyan font-serif flex flex-col justify-start items-center">
         <FilteringCard />
         <CardList />
       </main>
-    </>
+    </FilteringProvider>
   );
 }
 export default App;

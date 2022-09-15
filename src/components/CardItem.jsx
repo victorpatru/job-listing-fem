@@ -1,4 +1,23 @@
-function CardItem() {
+import { useEffect } from "react";
+
+function CardItem({ company }) {
+  const {
+    company: companyName,
+    contract,
+    featured,
+    languages,
+    level,
+    location,
+    logo,
+    new: newPosting,
+    position,
+    postedAt,
+    role,
+    tools,
+  } = company;
+
+  console.log(tools);
+
   return (
     // Card Container
     <section className="container max-w-xs bg-white  shadow-md rounded-lg text-base border-l-8 border-primaryCyan font-bold md:max-w-4xl xl:max-w-6xl mt-10">
