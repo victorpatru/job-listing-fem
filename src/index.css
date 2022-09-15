@@ -6,4 +6,12 @@
   .card {
     @apply bg-filteringLightCyan text-primaryCyan py-1 px-2 rounded hover:text-white hover:bg-primaryCyan cursor-pointer;
   }
+
+  .card-filter {
+    @apply bg-filteringLightCyan text-primaryCyan py-1 px-2 rounded cursor-pointer;
+  }
+
+  .remove-filter-btn {
+    @apply bg-primaryCyan absolute right-0 p-2 rounded-r group-hover:bg-veryDarkGrayishCyan;
+  }
 }

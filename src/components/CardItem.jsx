@@ -1,8 +1,8 @@
 function CardItem() {
   return (
     // Card Container
-    <section className="relative container max-w-xs bg-white  shadow-md rounded-lg text-base border-l-8 border-primaryCyan font-bold md:max-w-4xl xl:max-w-6xl">
-      <div className="px-6 py-10 flex flex-col space-y-2">
+    <section className="container max-w-xs bg-white  shadow-md rounded-lg text-base border-l-8 border-primaryCyan font-bold md:max-w-4xl xl:max-w-6xl mt-10">
+      <div className="relative px-6 py-10 flex flex-col space-y-2">
         <div className="md:flex md:justify-between md:items-center">
           <div className="flex flex-col items-center md:flex-row md:space-y-0 md:space-x-6">
             {/* Image Div */}
@@ -43,7 +43,7 @@ function CardItem() {
           <div className="border-t-[1px] border-[#B7C4C4] md:hidden"></div>
 
           {/* Technologies List Items */}
-          <ul className="flex flex-row flex-wrap gap-4 technologies-card pt-6 pb-2 md:flex-nowrap">
+          <ul className="flex flex-row flex-wrap gap-4 technologies-card pt-6 pb-2 pr-4 md:flex-nowrap">
             <li className="card">Frontend</li>
             <li className="card">Senior</li>
             <li className="card">HTML</li>
