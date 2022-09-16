@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import FilteringContext from "../context/FilteringContext";
+
 function CardItem({ company }) {
   const {
     company: companyName,
@@ -14,10 +17,12 @@ function CardItem({ company }) {
     tools,
   } = company;
 
+  const { handleFilter } = useContext(FilteringContext);
+
   return (
     // Card Container
     // border-l-8 border-primaryCyan => add this only on the top two
-    <section className="container max-w-xs bg-white shadow-md rounded-lg text-base font-bold md:max-w-4xl xl:max-w-6xl mt-10">
+    <section className="container max-w-xs bg-white shadow-md rounded-lg text-base font-bold md:max-w-4xl xl:max-w-6xl mt-14">
       <div className="relative px-6 py-10 flex flex-col space-y-2">
         <div className="md:flex md:justify-between md:items-center">
           <div className="flex flex-col items-center md:flex-row md:space-y-0 md:space-x-6 mr-10">
@@ -63,7 +68,10 @@ function CardItem({ company }) {
           <div className="border-t-[1px] border-[#B7C4C4] md:hidden"></div>
 
           {/* Technologies List Items */}
-          <ul className="flex flex-row flex-wrap gap-4 technologies-card pt-6 pb-2 pr-4 md:flex-nowrap">
+          <ul
+            className="flex flex-row flex-wrap gap-4 technologies-card pt-6 pb-2 pr-4 md:flex-nowrap"
+            onClick={handleFilter}
+          >
             <li className="card">{role}</li>
             <li className="card">{level}</li>
             {languages.map((language, index) => (

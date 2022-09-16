@@ -7,7 +7,7 @@ function CardList() {
 
   return (
     <>
-      {companies.map((company, index) => (
+      {companies.map((company) => (
         <CardItem key={company.id} company={company} />
       ))}
     </>
