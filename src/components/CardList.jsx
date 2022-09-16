@@ -5,15 +5,11 @@ import FilteringContext from "../context/FilteringContext";
 function CardList() {
   const { companies } = useContext(FilteringContext);
 
-  console.log(companies.length);
   return (
     <>
-      {companies.map(
-        (company) =>
-          typeof company !== undefined && (
-            <CardItem key={company.id} company={company} />
-          )
-      )}
+      {companies.map((company, index) => (
+        <CardItem key={company.id} company={company} />
+      ))}
     </>
   );
 }

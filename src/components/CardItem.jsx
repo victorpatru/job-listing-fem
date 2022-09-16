@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 function CardItem({ company }) {
   const {
     company: companyName,
@@ -16,13 +14,13 @@ function CardItem({ company }) {
     tools,
   } = company;
 
-  console.log(company);
   return (
     // Card Container
-    <section className="container max-w-xs bg-white  shadow-md rounded-lg text-base border-l-8 border-primaryCyan font-bold md:max-w-4xl xl:max-w-6xl mt-10">
+    // border-l-8 border-primaryCyan => add this only on the top two
+    <section className="container max-w-xs bg-white shadow-md rounded-lg text-base font-bold md:max-w-4xl xl:max-w-6xl mt-10">
       <div className="relative px-6 py-10 flex flex-col space-y-2">
         <div className="md:flex md:justify-between md:items-center">
-          <div className="flex flex-col items-center md:flex-row md:space-y-0 md:space-x-6">
+          <div className="flex flex-col items-center md:flex-row md:space-y-0 md:space-x-6 mr-10">
             {/* Image Div */}
             <a href="#">
               <img
@@ -31,19 +29,17 @@ function CardItem({ company }) {
                 className="absolute w-12 left-8 -top-6 md:w-20  md:static"
               />
             </a>
-            <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-2 mb-4">
               {/* Company name + Label Container */}
-              <div className="flex items-center space-x-2">
-                <h1 className="text-primaryCyan mr-6 md:text-xl">
-                  {companyName}
-                </h1>
+              <div className="flex items-center">
+                <h1 className="text-primaryCyan md:text-xl">{companyName}</h1>
                 {newPosting && (
-                  <span className="uppercase bg-primaryCyan text-white px-3 py-1 rounded-full text-[14px]">
+                  <span className="uppercase bg-primaryCyan text-white px-3 py-1 rounded-full text-[14px] ml-3">
                     New!
                   </span>
                 )}
                 {featured && (
-                  <span className="uppercase bg-veryDarkGrayishCyan text-white px-3 py-1 rounded-full text-[14px]">
+                  <span className="uppercase bg-veryDarkGrayishCyan text-white px-3 py-1 rounded-full text-[14px] ml-2">
                     Featured
                   </span>
                 )}
@@ -56,7 +52,7 @@ function CardItem({ company }) {
               </a>
 
               {/* Job Listing Additional Information Flex Container */}
-              <ul className="flex font-medium space-x-6 text-darkGrayishCyan md:text-md">
+              <ul className="flex font-medium space-x-5 text-darkGrayishCyan md:text-md">
                 <li>{postedAt}</li>
                 <li>{contract}</li>
                 <li>{location}</li>
@@ -75,8 +71,10 @@ function CardItem({ company }) {
                 {language}
               </li>
             ))}
-            {tools.map((tool) => (
-              <li className="card">{tool}</li>
+            {tools.map((tool, index) => (
+              <li className="card" key={index}>
+                {tool}
+              </li>
             ))}
           </ul>
         </div>
