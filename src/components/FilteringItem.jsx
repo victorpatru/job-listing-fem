@@ -1,6 +1,14 @@
+import { useContext } from "react";
+import FilteringContext from "../context/FilteringContext";
+
 function FilteringItem({ item }) {
+  const { removeFilterItem } = useContext(FilteringContext);
+
   return (
-    <li className="card-filter relative flex items-center pr-10 group ">
+    <li
+      className="card-filter relative flex items-center pr-10 group"
+      onClick={(e) => removeFilterItem(e.currentTarget.firstChild.innerText)}
+    >
       <h3 className="group-hover:text-veryDarkGrayishCyan">{item}</h3>
       <div className="remove-filter-btn">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
