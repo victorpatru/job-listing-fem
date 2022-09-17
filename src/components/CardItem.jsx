@@ -17,7 +17,7 @@ function CardItem({ company }) {
     tools,
   } = company;
 
-  const { handleFilter } = useContext(FilteringContext);
+  const { addFilter } = useContext(FilteringContext);
 
   return (
     // Card Container
@@ -70,7 +70,7 @@ function CardItem({ company }) {
           {/* Technologies List Items */}
           <ul
             className="flex flex-row flex-wrap gap-4 technologies-card pt-6 pb-2 pr-4 md:flex-nowrap"
-            onClick={handleFilter}
+            onClick={addFilter}
           >
             <li className="card">{role}</li>
             <li className="card">{level}</li>

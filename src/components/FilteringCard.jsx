@@ -3,7 +3,11 @@ import FilteringItem from "./FilteringItem";
 import FilteringContext from "../context/FilteringContext";
 
 function FilteringCard() {
-  const { filter, resetFilter } = useContext(FilteringContext);
+  const { currentFilter, resetFilter } = useContext(FilteringContext);
+
+  const filter = Object.values(currentFilter)
+    .filter((item) => item?.length !== undefined)
+    .flat();
 
   if (filter.length > 0) {
     return (
@@ -16,7 +20,6 @@ function FilteringCard() {
                 <FilteringItem item={item} key={index} />
               ))}
             </ul>
-
             {/* Clear Button */}
             <span
               className="text-darkGrayishCyan cursor-pointer hover:text-primaryCyan"
