@@ -18,6 +18,7 @@ function CardItem({ company }) {
   } = company;
 
   const { addFilter } = useContext(FilteringContext);
+  console.log(logo);
 
   return (
     // Card Container
@@ -29,7 +30,7 @@ function CardItem({ company }) {
             {/* Image Div */}
             <a href="#">
               <img
-                src={`src/assets${logo.slice(1)}`}
+                src={logo}
                 alt="Company Logo"
                 className="absolute w-12 left-8 -top-6 md:w-20  md:static"
               />

@@ -17,8 +17,8 @@ module.exports = {
         base: "15px",
       },
       backgroundImage: {
-        "mobile-header-image": "url(src/assets/images/bg-header-mobile.svg)",
-        "desktop-header-image": "url(src/assets/images/bg-header-desktop.svg)",
+        "mobile-header-image": "url(/bg-header-mobile.svg)",
+        "desktop-header-image": "url(/bg-header-desktop.svg)",
       },
       screens: {
         mobile: "480px",
